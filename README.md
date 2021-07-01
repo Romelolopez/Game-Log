@@ -8,6 +8,7 @@ This Basketball game log is intended for the use of any basketball program that 
 <p>React dependencies were installed through the terminal</p>
 <label>React</label>
 <ul>
+  <li>Axios: npm --save install axios</li>
   <li>Router: npm install --save react-router-dom</li>
   <li>BootStrap: npm install --save bootstrap</li>
 </ul>
