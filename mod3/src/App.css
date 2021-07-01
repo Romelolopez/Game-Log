@@ -1,0 +1,55 @@
+.nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(9, 15, 105);
+    color: black;
+  }
+
+  .center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+  }
+
+  .updateForm{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .gameForm{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+  }
+
+  .link {
+    color: #FFF;
+    text-decoration: none;
+  }
+
+  .link:hover {
+     color: #00F
+  }
+
+  .title{
+    color: #FFF;
+  }
+
+  .App{
+    background-color: rgb(219, 219, 223);
+  }
+
+  table.table-bordered{
+    border:1px solid blue;
+  }
+table.table-bordered > thead > tr > th{
+    border:1px solid blue;
+}
+table.table-bordered > tbody > tr > td{
+    border:1px solid blue;
+}
