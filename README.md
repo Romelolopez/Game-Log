@@ -19,5 +19,7 @@ This Basketball game log is intended for the use of any basketball program that 
   <li>My SQL Driver</li>
 </ul>
 
+<div align="center">
 <img src="https://live.staticflickr.com/65535/51282977971_d86a5a4022_z.jpg" width="640" height="276" alt="Add Game Component">
 <caption>(Picture above is the "ADD" component)</caption>
+</div>
