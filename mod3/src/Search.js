@@ -26,6 +26,7 @@ class Search extends React.Component {
 
         GameService.getByDate(this.state.searchDate).then((res) => {
             console.log(res)
+            console.log(this.state.searchDate)
             //We use square brackets here because it is signle object and map only works on arrays. 
             //we know its a object because of the curly brackets
             this.setState({gameResult:res.data})
@@ -54,20 +55,20 @@ class Search extends React.Component {
                 <h3>Search For A Game By Date</h3>
                 <form>
                     <label>Date: </label>
-                    <input type="text" name="searchDate" value={this.state.searchDate} onChange={this.handleChange}/>
+                    <input type="text" name="searchDate" value={this.state.searchDate} class="form-control" onChange={this.handleChange} placeholder="YYYY-MM-DD"/>
                 </form>
-                <button onClick={this.searchGame}>Submit</button>
+                <button type="submit" className="btn-sm btn-primary" onClick={this.searchGame}>Submit</button>
             
-                <div>
-                    <table className="table table-bordered table-hover">
+                <div className="search-table">
+                    <table className="table-responsive table-bordered table-hover">
                         <thead>
                             <tr>
                                 <th>Game ID</th>
                                 <th>Date</th>
                                 <th>Home Team</th>
-                                <th>Opponet Team</th>
+                                <th>Away Team</th>
                                 <th>Home Team Score</th>
-                                <th>Opponet Team Score</th>
+                                <th>Away Team Score</th>
                                 <th>Winner</th>
                             </tr>
                         </thead>

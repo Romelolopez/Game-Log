@@ -47,9 +47,10 @@ class DeleteGame extends React.Component {
                 <h3>Delete A Game By ID</h3>
                 <form>
                     <label>ID: </label>
-                    <input type="text" name="id" value={this.state.id} onChange={this.handleChange}/>
+                    <input type="text" name="id" value={this.state.id} class="form-control" onChange={this.handleChange}/>
                 </form>
-                <button onClick={this.delete}>Submit</button>
+                
+                <button type="submit" className="btn-sm btn-primary" onClick={this.delete}>Submit</button>
             </div> 
 
         )

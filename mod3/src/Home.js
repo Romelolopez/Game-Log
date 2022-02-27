@@ -8,6 +8,7 @@ import UpdateGame from "./UpdateGame"
 import GetById from "./Search"
 
 
+
 class Home extends React.Component {
     constructor(props){
         super(props)
@@ -40,30 +41,30 @@ class Home extends React.Component {
     }    
     render() {
 		return (
-			<div>
+			<div >
+                
                 <Router>
-                <div>
-                    <NavBar />
-                        <Switch>
-                            <Route path="/AddGame" render={() => <AddGame changeGame={this.changeGame}/>} />
-                            <Route path="/DeleteGame" render={() => <DeleteGame changeGame={this.changeGame}/>} />
-                            <Route path="/UpdateGame" render={() => <UpdateGame changeGame={this.changeGame}/>} />
-                            <Route path="/SearchById" render={() => <GetById changeGame={this.changeGame}/>} />
-                        </Switch>
-                </div>
+                <NavBar />
+                    <Switch>
+                        <Route path="/AddGame" render={() => <AddGame changeGame={this.changeGame}/>} />
+                        <Route path="/DeleteGame" render={() => <DeleteGame changeGame={this.changeGame}/>} />
+                        <Route path="/UpdateGame" render={() => <UpdateGame changeGame={this.changeGame}/>} />
+                        <Route path="/SearchById" render={() => <GetById changeGame={this.changeGame}/>} />
+                    </Switch>
                 </Router>
-                <hr/>
+                
+                <div className="home">
+                
                 <h1>Game Log</h1>
-                <div>
-                    <table className="table table-bordered table-hover">
+                    <table className="table-responsive table-bordered table-hover">
                         <thead>
                             <tr>
                                 <th>Game ID</th>
                                 <th>Date</th>
                                 <th>Home Team</th>
-                                <th>Opponet Team</th>
+                                <th>Away Team</th>
                                 <th>Home Team Score</th>
-                                <th>Opponet Team Score</th>
+                                <th>Away Team Score</th>
                                 <th>Winner</th>
                             </tr>
                         </thead>
@@ -84,7 +85,8 @@ class Home extends React.Component {
                             }
                         </tbody>
                     </table>
-                </div>
+                    </div>
+                
 			</div>
 
 		);

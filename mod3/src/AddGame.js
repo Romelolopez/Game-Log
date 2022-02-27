@@ -25,8 +25,8 @@ class AddGame extends React.Component {
             date: this.state.date,
             home_team: this.state.home_team,
             opp_team: this.state.opp_team,
-            home_team_score: this.state.opp_team_score,
-            opp_team_score: this.state.home_team_score,
+            home_team_score: this.state.home_team_score,
+            opp_team_score: this.state.opp_team_score,
         }
 
         // axios.post('http://localhost:8081/api/AddGames', obj)
@@ -42,6 +42,8 @@ class AddGame extends React.Component {
             console.log(res)
             this.props.changeGame()
         })
+
+        console.log(this.state.opp_team_score)
 
     }
 
@@ -62,35 +64,71 @@ class AddGame extends React.Component {
             <div className="center">
                 <h3>Add A Game</h3>
                 <form>
-                    <div className="gameForm">
+                    {/* <div className="gameForm">
                     
-                    <div>
-                    <label>Date: </label>
-                    <input type="text" name="date" value={this.state.date} onChange={this.handleChange}/>
-                    </div>
+                        <div>
+                            <label>Date: </label>
+                            <input type="text" name="date" value={this.state.date} onChange={this.handleChange}/>
+                        </div>
+                        
+                        <div>
+                            <label>Home Team Name: </label>
+                            <input type="text" name="home_team" value={this.state.home_team} onChange={this.handleChange}/>
+                        </div>
+                        
+                        <div>
+                            <label>Opponet Team Name: </label>
+                            <input type="text" name="opp_team" value={this.state.opp_team} onChange={this.handleChange}/>
+                        </div>
+                        
+                        <div>
+                            <label>Home Team Score: </label>
+                            <input type="text" name="home_team_score" value={this.state.home_team_score} onChange={this.handleChange}/>
+                        </div>
+                        
+                        <div>
+                            <label>Opponet Team Score: </label>
+                            <input type="text" name="opp_team_score" value={this.state.opp_team_score} onChange={this.handleChange}/>
+                        </div>
+
+                    </div> */}
                     
-                    <div>
-                    <label>Home Team Name: </label>
-                    <input type="text" name="home_team" value={this.state.home_team} onChange={this.handleChange}/>
-                    </div>
+                        <div class="row">
+                            <div class="col">
+                                <label>Date: </label>
+                                <input type="text" name="date" value={this.state.date} class="form-control" onChange={this.handleChange} placeholder="YYYY-MM-DD"/>  
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <label>Home Team Name: </label>
+                                <input type="text" name="home_team" value={this.state.home_team} class="form-control" onChange={this.handleChange}/>
+                            </div>
+
+                            <div class="col">
+                                <label>Home Team Score: </label>
+                                <input type="text" name="home_team_score" value={this.state.home_team_score} class="form-control" onChange={this.handleChange}/>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <label>Away Team Name: </label>
+                                <input type="text" name="opp_team" value={this.state.opp_team} class="form-control" onChange={this.handleChange}/>
+                            </div>
+
+                            <div class="col">
+                                <label>Away Team Score: </label>
+                                <input type="text" name="opp_team_score" value={this.state.opp_team_score} class="form-control" onChange={this.handleChange}/>
+                            </div>
+                        </div>
                     
-                    <div>
-                    <label>Opponet Team Name: </label>
-                    <input type="text" name="opp_team" value={this.state.opp_team} onChange={this.handleChange}/>
-                    </div>
                     
-                    <div>
-                    <label>Home Team Score: </label>
-                    <input type="text" name="home_team_score" value={this.state.home_team_score} onChange={this.handleChange}/>
-                    </div>
                     
-                    <div>
-                    <label>Opponet Team Score: </label>
-                    <input type="text" name="opp_team_score" value={this.state.opp_team_score} onChange={this.handleChange}/>
-                    </div>
-                    </div>
+
                 </form>
-                <button onClick={this.post}>Submit</button>
+                <button type="submit" className="btn-sm btn-primary" onClick={this.post}>Submit</button>
             </div> 
 
         )

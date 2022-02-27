@@ -63,34 +63,34 @@ class UpdateGame extends React.Component {
     render() 
     {
         return (
-            <div >
-                <h3 className="center">Update A Game</h3>
-                <div className="updateForm">
+            <div className="center">
+                <h3>Update A Game</h3>
                 <form>
-                    <label>ID: </label>
-                    <input type="text" name="id" value={this.state.id} onChange={this.handleChange}/>
-                </form>
+                    <div class="row">
+                        <div class="col">
+                            <label>ID: </label>
+                            <input type="text" name="id" value={this.state.id} class="form-control" onChange={this.handleChange} placeholder="ID" />
+                        </div>
+                        <div class="col">
+                            <label>Input: </label>
+                            <input type="text" name="input" value={this.state.input} class="form-control" onChange={this.handleChange}/> 
+                        </div>
+                    </div>
 
-                
-                {/* add a on chnage for the sleect element and that will detect everytime we change just like the input text */}
-                <form>
-                <label htmlFor="columns">Choose a stat column:</label>
-                <select id="columns" >
-                
-                    <option value="date">Date</option>
-                    <option value="home_team">Home Team</option>
-                    <option value="opp_team">Opp Team</option>
-                    <option value="home_team_score">Home Team Score</option>
-                    <option value="opp_team_score">Opp Team Score</option>
-                </select>
+                    <div class="row">
+                        <div class="col">
+                            <label>Choose a stat column:</label>
+                            <select id="columns" class="form-select form-control-md">
+                                <option value="date">Date</option>
+                                <option value="home_team">Home Team</option>
+                                <option value="opp_team">Away Team</option>
+                                <option value="home_team_score">Home Team Score</option>
+                                <option value="opp_team_score">Away Team Score</option>
+                            </select>
+                            </div>
+                    </div>
                 </form>
-                <form>
-                    <label>Input: </label>
-                    <input type="text" name="input" value={this.state.input} onChange={this.handleChange}/>
-                </form>
-
-                <button onClick={this.setup}>Update</button>
-                </div>
+                <button type="submit" className="btn-sm btn-primary" onClick={this.setup}>Submit</button>  
             </div> 
 
         )
