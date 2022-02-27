@@ -21,6 +21,6 @@ This Basketball game log is intended for the use of any basketball program that 
 </ul>
 
 <div align="center">
-<img src="ttps://live.staticflickr.com/65535/51907195689_eed818a020_b.jpg" width="640" height="276" alt="Add Game Component">
+<img src="https://live.staticflickr.com/65535/51907195689_eed818a020_b.jpg" width="640" height="276" alt="Add Game Component">
 </div>
 
