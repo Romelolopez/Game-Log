@@ -1,4 +1,7 @@
 # Game-Log
+<div align="center">
+  <img src="https://live.staticflickr.com/65535/51907195689_eed818a020_b.jpg" width="500" height="317" alt="Add Game Component">
+</div>
 Basketball game log using Spring Boot, BootStrap, SQL, Java, React 
 
 <h2>Target Audience</h2>
@@ -20,7 +23,4 @@ This Basketball game log is intended for the use of any basketball program that 
   <li>My SQL Driver</li>
 </ul>
 
-<div align="center">
-<img src="https://live.staticflickr.com/65535/51907195689_eed818a020_b.jpg" width="500" height="317" alt="Add Game Component">
-</div>
 
